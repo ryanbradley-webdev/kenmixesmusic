@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name {
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+
+.links {
+    display: flex;
+}
+
+.links button {
+    margin-left: 16px;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    color: var(--color-white);
+    text-decoration: none;
+}

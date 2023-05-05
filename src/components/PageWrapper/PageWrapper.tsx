@@ -1,13 +1,12 @@
 import { Outlet } from 'react-router-dom'
+import Header from '../Header/Header'
 import styles from './PageWrapper.module.css'
 
 export default function PageWrapper() {
     return (
         <>
-            <header className={styles.header}>
-                header
-            </header>
-            <main>
+            <Header />
+            <main className={styles.main}>
                 <Outlet />
             </main>
             <footer>

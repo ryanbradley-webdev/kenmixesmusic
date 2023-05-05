@@ -4,6 +4,7 @@
 :root {
     --color-white: #FFFFFF;
     --color-orange: #FF914D;
+    --color-bg: #35373D;
 }
 
 *,
@@ -12,6 +13,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    color: var(--color-white);
+    background-color: var(--color-bg);
 }
 
 body {
