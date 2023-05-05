@@ -62,6 +62,12 @@
     border: none;
 }
 
+@media screen and (min-width: 769px) {
+    .closeBtn {
+        display: none;
+    }
+}
+
 .closeBtn div {
     position: absolute;
     top: 15px;
@@ -99,6 +105,10 @@
         position: unset;
         flex-direction: row;
         gap: 30px;
+        height: auto;
+        width: auto;
+        background-color: transparent;
+        padding-top: 0;
     }
 }
 
@@ -118,6 +128,11 @@
 }
 
 @media screen and (min-width: 769px) {
+    .menuBtn {
+        font-family: 'Poppins', 'Arial', 'sans-serif';
+        font-size: 16px;
+    }
+
     .menuBtn:is(:hover, :focus) {
         color: var(--color-white);
         background: var(--color-orange);
@@ -145,6 +160,11 @@
 }
 
 @media screen and (min-width: 769px) {
+    .nav a {
+        font-family: 'Poppins', 'Arial', 'sans-serif';
+        font-size: 16px;
+    }
+
     .nav a:is(:hover, :focus) {
         color: var(--color-orange);
     }
