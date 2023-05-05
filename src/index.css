@@ -4,7 +4,7 @@
 :root {
     --color-white: #FFFFFF;
     --color-orange: #FF914D;
-    --color-bg: #35373D;
+    --color-bg: #35373da6;
 }
 
 *,
@@ -16,10 +16,14 @@
 }
 
 html {
+    height: 100vh;
     color: var(--color-white);
-    background-color: var(--color-bg);
+    background-image: url('/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body {
-    font-family: 'Poppins', 'Arial', 'sans-serif';
+    height: 100%;
 }

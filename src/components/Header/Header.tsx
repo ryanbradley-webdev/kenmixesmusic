@@ -12,15 +12,15 @@ export default function Header() {
             <div className={styles.links}>
 
                 <nav className={styles.nav}>
-                    <NavLink to='/'>
+                    <NavLink to='/' className={({ isActive }) => isActive ? 'orange-text' : ''}>
                         Home
                     </NavLink>
 
-                    <NavLink to='/bio'>
+                    <NavLink to='/bio' className={({ isActive }) => isActive ? 'orange-text' : ''}>
                         Bio
                     </NavLink>
 
-                    <NavLink to='/credits'>
+                    <NavLink to='/credits' className={({ isActive }) => isActive ? 'orange-text' : ''}>
                         Credits
                     </NavLink>
                 </nav>
