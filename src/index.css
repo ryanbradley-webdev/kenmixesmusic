@@ -18,6 +18,7 @@
 html {
     height: 100vh;
     height: 100dvh;
+    overflow: hidden;
     color: var(--color-white);
     background-image: url('/background.png');
     background-position: center;

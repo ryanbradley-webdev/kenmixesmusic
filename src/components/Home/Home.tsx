@@ -1,4 +1,5 @@
 import envelope from '../../assets/envelope-regular.svg'
+import music from '../../assets/music-solid.svg'
 import styles from './Home.module.css'
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
                 <span>GREAT MUSIC</span>
             </h1>
 
-            <p>
+            <p className={styles.subheader}>
                 My mixes help your recordings cut through the noise
             </p>
 
@@ -25,6 +26,7 @@ export default function Home() {
             </button>
 
             <button className={styles.heroBtnBottom}>
+                <img src={music} alt="" />
                 Hear My Work
             </button>
 
