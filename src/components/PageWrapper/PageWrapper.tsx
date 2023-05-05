@@ -9,8 +9,8 @@ export default function PageWrapper() {
             <main className={styles.main}>
                 <Outlet />
             </main>
-            <footer>
-                footer
+            <footer className={styles.footer}>
+                &copy; 2023 by Ken Baumann
             </footer>
         </>
     )
