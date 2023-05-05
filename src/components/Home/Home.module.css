@@ -1,0 +1,45 @@
+.heroSection {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 275px;
+    margin-inline: auto;
+}
+
+.hero {
+    font-family: 'Bebas Neue', 'Arial', 'sans-serif';
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 0.9em;
+}
+
+.hero span {
+    color: var(--color-orange);
+}
+
+.heroBtnTop,
+.heroBtnBottom {
+    width: 100%;
+    height: 60px;
+    font-family: inherit;
+    font-weight: 700;
+    color: var(--color-white);
+    border-radius: 5px;
+}
+
+.heroBtnTop {
+    background-color: var(--color-orange);
+    border: none;
+}
+
+.heroBtnBottom {
+    background-color: transparent;
+    border: 2px solid var(--color-white);
+}
+
+.heroBtnTop img,
+.heroBtnBottom img {
+    width: 25px;
+}
