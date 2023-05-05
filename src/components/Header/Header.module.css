@@ -1,4 +1,5 @@
 .header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,40 +12,140 @@
     letter-spacing: -1px;
 }
 
-.links {
-    display: flex;
-    gap: 30px;
+.burgerBtn {
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
 }
 
-.links button {
+@media screen and (min-width: 769px) {
+    .burgerBtn {
+        display: none;
+    }
+}
+
+.burgerDiv {
+    position: relative;
+}
+
+.burgerDiv,
+.burgerDiv::before,
+.burgerDiv::after {
+    width: 30px;
+    height: 2px;
+    background: var(--color-white);
+}
+
+.burgerDiv::before,
+.burgerDiv::after {
+    position: absolute;
+    content: '';
+    left: 0;
+}
+
+.burgerDiv::before {
+    top: -9px;
+}
+
+.burgerDiv::after {
+    top: 9px;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 32px;
+    right: 40px;
+    height: 30px;
+    width: 30px;
+    background: none;
+    border: none;
+}
+
+.closeBtn div {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: black;
+    transform-origin: center;
+}
+
+.closeBtn div:first-child {
+    rotate: 45deg;
+}
+
+.closeBtn div:last-child {
+    rotate: -45deg;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    height: 100dvh;
+    width: 250px;
+    padding-top: 100px;
+    background-color: var(--color-white);
+    transition: right 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 769px) {
+    .menu {
+        position: unset;
+        flex-direction: row;
+        gap: 30px;
+    }
+}
+
+.menuBtn {
+    width: 150px;
+    margin: 20px auto;
     padding: 8px;
     color: var(--color-orange);
     background: transparent;
     border: 1px solid var(--color-orange);
     border-radius: 10px;
     outline: none;
-    font-family: inherit;
+    font-family: 'Bebas Neue', 'Arial', 'sans-serif';
+    font-size: 24px;
     cursor: pointer;
     transition: 0.3s ease;
 }
 
-.links button:is(:hover, :focus) {
-    color: var(--color-white);
-    background: var(--color-orange);
+@media screen and (min-width: 769px) {
+    .menuBtn:is(:hover, :focus) {
+        color: var(--color-white);
+        background: var(--color-orange);
+    }
 }
 
 .nav {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 60px;
 }
 
+@media screen and (min-width: 769px) {
+    .nav {
+        flex-direction: row;
+    }
+}
+
 .nav a {
     text-decoration: none;
-    font-weight: 300;
+    font-family: 'Bebas Neue', 'Arial', 'sans-serif';
+    font-size: 24px;
     transition: color 0.3s ease;
 }
 
-.nav a:is(:hover, :focus) {
-    color: var(--color-orange);
+@media screen and (min-width: 769px) {
+    .nav a:is(:hover, :focus) {
+        color: var(--color-orange);
+    }
 }

@@ -11,7 +11,13 @@ main {
 }
 
 a {
-    color: var(--color-white);
+    color: black;
+}
+
+@media screen and (min-width: 769px) {
+    a {
+        color: var(--color-white);
+    }
 }
 
 .orange-text {
