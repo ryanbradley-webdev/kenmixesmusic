@@ -2,7 +2,11 @@ import envelope from '../../assets/envelope-regular.svg'
 import music from '../../assets/music-solid.svg'
 import styles from './Home.module.css'
 
-export default function Home() {
+type HomeProps = {
+    toggleContactModal: () => void
+}
+
+export default function Home({ toggleContactModal }: HomeProps) {
     return (
         <section className={styles.heroSection}>
 
@@ -20,7 +24,7 @@ export default function Home() {
                 My mixes help your recordings cut through the noise
             </p>
 
-            <button className={styles.heroBtnTop}>
+            <button className={styles.heroBtnTop} onClick={toggleContactModal}>
                 <img src={envelope} alt="" />
                 Get In Touch
             </button>
