@@ -6,6 +6,7 @@ import Bio from './components/Bio/Bio'
 import Credits from './components/Credits/Credits'
 import Contact from './components/Contact/Contact'
 import './App.css'
+import Portfolio from './components/Portfolio/Portfolio'
 
 function App() {
   const [contactModalVisible, setContactModalVisible] = useState(false)
@@ -15,16 +16,21 @@ function App() {
     setContactModalVisible(!contactModalVisible)
   }
 
+  const togglePortfolio = () => {
+    setPortfolioVisible(!portfolioVisible)
+  }
+
   return (
     <>
       <Routes>
-        <Route path='/' element={<PageWrapper toggleContactModal={toggleContactModal} />}>
-          <Route index element={<Home toggleContactModal={toggleContactModal} />} />
+        <Route path='/' element={<PageWrapper toggleContactModal={toggleContactModal} togglePortfolio={togglePortfolio} />}>
+          <Route index element={<Home toggleContactModal={toggleContactModal} togglePortfolio={togglePortfolio} />} />
           <Route path='bio' element={<Bio />} />
           <Route path='credits' element={<Credits />} />
         </Route>
       </Routes>
       <Contact isVisible={contactModalVisible} toggleModal={toggleContactModal} />
+      <Portfolio isVisible={portfolioVisible} toggleModal={togglePortfolio} />
     </>
   )
 }

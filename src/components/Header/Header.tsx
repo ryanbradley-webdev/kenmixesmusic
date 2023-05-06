@@ -5,10 +5,11 @@ import { useState } from 'react'
 import CloseBtn from '../../assets/CloseBtn'
 
 type HeaderProps = {
-    toggleContactModal: () => void
+    toggleContactModal: () => void,
+    togglePortfolio: () => void
 }
 
-export default function Header({ toggleContactModal }: HeaderProps) {
+export default function Header({ toggleContactModal, togglePortfolio }: HeaderProps) {
     const [isVisible, setIsVisible] = useState(false)
 
     const toggleMenuVisibility = () => {
@@ -22,6 +23,11 @@ export default function Header({ toggleContactModal }: HeaderProps) {
     const openContactModal = () => {
         toggleMenuVisibility()
         toggleContactModal()
+    }
+
+    const openPortfolio = () => {
+        toggleMenuVisibility()
+        togglePortfolio()
     }
 
     return (
@@ -42,7 +48,7 @@ export default function Header({ toggleContactModal }: HeaderProps) {
                         Home
                     </NavLink>
 
-                    <button className={styles.menuBtn} onClick={toggleMenuVisibility}>
+                    <button className={styles.menuBtn} onClick={openPortfolio}>
                         Portfolio
                     </button>
 

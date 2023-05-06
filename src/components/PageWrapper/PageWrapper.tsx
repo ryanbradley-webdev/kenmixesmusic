@@ -3,13 +3,14 @@ import Header from '../Header/Header'
 import styles from './PageWrapper.module.css'
 
 type PageWrapperProps = {
-    toggleContactModal: () => void
+    toggleContactModal: () => void,
+    togglePortfolio: () => void
 }
 
-export default function PageWrapper({ toggleContactModal }: PageWrapperProps) {
+export default function PageWrapper({ toggleContactModal, togglePortfolio }: PageWrapperProps) {
     return (
         <>
-            <Header toggleContactModal={toggleContactModal} />
+            <Header toggleContactModal={toggleContactModal} togglePortfolio={togglePortfolio} />
             <main className={styles.main}>
                 <Outlet />
             </main>

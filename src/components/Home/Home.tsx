@@ -3,10 +3,11 @@ import music from '../../assets/music-solid.svg'
 import styles from './Home.module.css'
 
 type HomeProps = {
-    toggleContactModal: () => void
+    toggleContactModal: () => void,
+    togglePortfolio: () => void
 }
 
-export default function Home({ toggleContactModal }: HomeProps) {
+export default function Home({ toggleContactModal, togglePortfolio }: HomeProps) {
     return (
         <section className={styles.heroSection}>
 
@@ -29,7 +30,7 @@ export default function Home({ toggleContactModal }: HomeProps) {
                 Get In Touch
             </button>
 
-            <button className={styles.heroBtnBottom}>
+            <button className={styles.heroBtnBottom} onClick={togglePortfolio}>
                 <img src={music} alt="" />
                 Hear My Work
             </button>

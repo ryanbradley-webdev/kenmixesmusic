@@ -1,0 +1,8 @@
+.modal {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: red;
+    transition: right 0.3s ease-in-out;
+}
