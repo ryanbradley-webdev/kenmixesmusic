@@ -2,9 +2,13 @@ import { NavLink } from 'react-router-dom'
 import styles from './Header.module.css'
 import Burger from './Burger'
 import { useState } from 'react'
-import CloseBtn from './CloseBtn'
+import CloseBtn from '../../assets/CloseBtn'
 
-export default function Header() {
+type HeaderProps = {
+    toggleContactModal: () => void
+}
+
+export default function Header({ toggleContactModal }: HeaderProps) {
     const [isVisible, setIsVisible] = useState(false)
 
     const toggleMenuVisibility = () => {
@@ -13,6 +17,11 @@ export default function Header() {
             return
         }
         setIsVisible(!isVisible)
+    }
+
+    const openContactModal = () => {
+        toggleMenuVisibility()
+        toggleContactModal()
     }
 
     return (
@@ -29,26 +38,26 @@ export default function Header() {
                 <CloseBtn toggleMenu={toggleMenuVisibility} />
 
                 <nav className={styles.nav}>
-                    <NavLink to='/' className={({ isActive }) => isActive ? 'orange-text' : ''}>
+                    <NavLink to='/' className={({ isActive }) => isActive ? 'orange-text' : ''} onClick={toggleMenuVisibility}>
                         Home
                     </NavLink>
 
-                    <NavLink to='/bio' className={({ isActive }) => isActive ? 'orange-text' : ''}>
+                    <button className={styles.menuBtn} onClick={toggleMenuVisibility}>
+                        Portfolio
+                    </button>
+
+                    <NavLink to='/bio' className={({ isActive }) => isActive ? 'orange-text' : ''} onClick={toggleMenuVisibility}>
                         Bio
                     </NavLink>
 
-                    <NavLink to='/credits' className={({ isActive }) => isActive ? 'orange-text' : ''}>
+                    <NavLink to='/credits' className={({ isActive }) => isActive ? 'orange-text' : ''} onClick={toggleMenuVisibility}>
                         Credits
                     </NavLink>
+
+                    <button className={styles.menuBtn} onClick={openContactModal}>
+                        Contact
+                    </button>
                 </nav>
-
-                <button className={styles.menuBtn}>
-                    Portfolio
-                </button>
-
-                <button className={styles.menuBtn}>
-                    Contact
-                </button>
 
             </div>
 

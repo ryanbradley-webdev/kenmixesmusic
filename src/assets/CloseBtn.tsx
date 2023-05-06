@@ -1,4 +1,4 @@
-import styles from './Header.module.css'
+import styles from './CloseBtn.module.css'
 
 type CloseBtnProps = {
     toggleMenu: () => void
@@ -6,7 +6,7 @@ type CloseBtnProps = {
 
 export default function CloseBtn({ toggleMenu }: CloseBtnProps) {
     return (
-        <button className={styles.closeBtn} onClick={toggleMenu}>
+        <button className={styles.closeBtn} onClick={toggleMenu} type='button'>
             <div></div>
             <div></div>
         </button>

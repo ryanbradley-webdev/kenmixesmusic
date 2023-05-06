@@ -1,0 +1,73 @@
+.modal {
+    position: absolute;
+    inset: 0;
+    place-items: center;
+    background-color: var(--color-bg);
+}
+
+.form {
+    position: relative;
+    display: grid;
+    padding: 24px;
+    width: 80%;
+    color: #4f4f4f;
+    background-color: var(--color-white);
+}
+
+.form h2 {
+    font-family: 'Bebas Neue', 'Arial', 'sans-serif';
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 16px 10px;
+    background-color: #f1f1f1;
+    border: none;
+    font-family: inherit;
+    border-bottom: 2px solid transparent;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+    font-style: italic;
+    color: #e1e1e1;
+}
+
+.form input:is(:hover, :focus),
+.form textarea:is(:hover, :focus) {
+    outline: none;
+    border-bottom-color: black;
+}
+
+.namesGrid {
+    display: grid;
+    column-gap: 10px;
+}
+
+@media screen and (min-width: 481px) {
+    .namesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .namesGrid label:last-of-type {
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
+
+.submit {
+    padding-block: 14px;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-white);
+    background-color: var(--color-orange);
+    border: none;
+    border-radius: 5px;
+}

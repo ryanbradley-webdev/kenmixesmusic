@@ -17,6 +17,7 @@
     height: 30px;
     background: none;
     border: none;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 769px) {
@@ -52,40 +53,6 @@
     top: 9px;
 }
 
-.closeBtn {
-    position: absolute;
-    top: 32px;
-    right: 40px;
-    height: 30px;
-    width: 30px;
-    background: none;
-    border: none;
-}
-
-@media screen and (min-width: 769px) {
-    .closeBtn {
-        display: none;
-    }
-}
-
-.closeBtn div {
-    position: absolute;
-    top: 15px;
-    left: 0;
-    width: 30px;
-    height: 2px;
-    background: black;
-    transform-origin: center;
-}
-
-.closeBtn div:first-child {
-    rotate: 45deg;
-}
-
-.closeBtn div:last-child {
-    rotate: -45deg;
-}
-
 .menu {
     position: absolute;
     top: 0;
@@ -114,13 +81,11 @@
 
 .menuBtn {
     width: 150px;
-    margin: 20px auto;
+    margin: 0 auto;
     padding: 8px;
-    color: var(--color-orange);
+    color: black;
     background: transparent;
-    border: 1px solid var(--color-orange);
-    border-radius: 10px;
-    outline: none;
+    border: none;
     font-family: 'Bebas Neue', 'Arial', 'sans-serif';
     font-size: 24px;
     cursor: pointer;
@@ -144,7 +109,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 60px;
+    gap: 30px;
 }
 
 @media screen and (min-width: 769px) {
