@@ -131,6 +131,7 @@
     .menuBtn {
         font-family: 'Poppins', 'Arial', 'sans-serif';
         font-size: 16px;
+        margin: 0;
     }
 
     .menuBtn:is(:hover, :focus) {
