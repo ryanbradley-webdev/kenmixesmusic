@@ -30,7 +30,7 @@ function App() {
         </Route>
       </Routes>
       <Contact isVisible={contactModalVisible} toggleModal={toggleContactModal} />
-      <Portfolio isVisible={portfolioVisible} toggleModal={togglePortfolio} />
+      <Portfolio isVisible={portfolioVisible} toggleModal={togglePortfolio} toggleContactModal={toggleContactModal} />
     </>
   )
 }

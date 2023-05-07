@@ -13,13 +13,13 @@ export default function Waveform({ track }: WaveformProps) {
             const wavesurfer = WaveSurfer.create({
                 container: waveRef.current
             })
-            wavesurfer.load(track || '/Commercial_Demo.wav')
+            wavesurfer.load(track)
 
             return () => wavesurfer.destroy()
         }
     }, [track])
 
     return (
-        <div ref={waveRef} style={{ width: '250px' }}>Waveform</div>
+        <div ref={waveRef} style={{ width: '250px' }}></div>
     )
 }

@@ -3,6 +3,9 @@
     top: 0;
     bottom: 0;
     width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     color: var(--color-white-sec);
     background-color: var(--color-bg-portfolio);
     transition: right 0.3s ease-in-out;
