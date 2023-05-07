@@ -20,15 +20,15 @@ export default function Portfolio({ isVisible, toggleModal, toggleContactModal }
     }
 
     useEffect(() => {
-        const changeListener = () => {
+        const listener = () => {
             if (window.innerWidth <= 480) {
                 setWidth('100%')
             }
         }
 
-        window.addEventListener('change', changeListener)
+        window.addEventListener('resize', listener)
         
-        return () => window.removeEventListener('change', changeListener)
+        return () => window.removeEventListener('resize', listener)
     }, [])
 
     return (
