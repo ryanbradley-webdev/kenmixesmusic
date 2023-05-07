@@ -3,6 +3,26 @@
     top: 0;
     bottom: 0;
     width: 300px;
-    background-color: red;
+    color: var(--color-white-sec);
+    background-color: var(--color-bg-portfolio);
     transition: right 0.3s ease-in-out;
+}
+
+.trackItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--color-white-sec);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.trackItem:is(:hover, :focus) {
+    background: var(--color-white-ter);
+}
+
+.trackItem svg {
+    height: 20px;
 }
