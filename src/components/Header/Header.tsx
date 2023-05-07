@@ -41,7 +41,7 @@ export default function Header({ toggleContactModal, togglePortfolio }: HeaderPr
 
             <div className={styles.menu} style={{ right: isVisible ? '0' : '-250px' }}>
 
-                <CloseBtn toggleMenu={toggleMenuVisibility} />
+                <CloseBtn toggleMenu={toggleMenuVisibility} className={styles.closeBtn} />
 
                 <nav className={styles.nav}>
                     <NavLink to='/' className={({ isActive }) => isActive ? 'orange-text' : ''} onClick={toggleMenuVisibility}>

@@ -2,10 +2,11 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-bottom: 42px;
+    width: 100%;
     color: var(--color-white-sec);
     background-color: var(--color-bg-portfolio);
     transition: right 0.3s ease-in-out;
@@ -17,21 +18,53 @@
     }
 }
 
-.trackItem {
-    width: 100%;
+.btnDiv {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 20px;
-    color: var(--color-white-sec);
+    font-family: 'Poppins', 'Arial', 'sans-serif';
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.btn {
+    width: 90%;
+    height: 60px;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-white);
+    background-color: var(--color-orange);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    height: 30px;
+    width: 30px;
     background: none;
     border: none;
     cursor: pointer;
 }
 
-.trackItem:is(:hover, :focus) {
-    background: var(--color-white-ter);
+.closeBtn div {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--color-white-sec);
+    transform-origin: center;
 }
 
-.trackItem svg {
-    height: 20px;
+.closeBtn div:first-child {
+    rotate: 45deg;
+}
+
+.closeBtn div:last-child {
+    rotate: -45deg;
 }

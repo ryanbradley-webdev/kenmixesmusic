@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react'
-import Waveform from './Waveform'
-import TrackItem from './TrackItem'
-import { storage } from '../../util/firebase'
-import { ref, listAll, StorageReference, getDownloadURL } from 'firebase/storage'
 import styles from './Portfolio.module.css'
+import CloseBtn from '../../assets/CloseBtn'
 
 type PortfolioProps = {
     isVisible: boolean,
@@ -16,23 +13,6 @@ export default function Portfolio({ isVisible, toggleModal, toggleContactModal }
         if (window.innerWidth > 480) return '300px'
         return  '100%'
     })
-    const [selectedTrack, setSelectedTrack] = useState('/Commercial_Demo.wav')
-    const [tracks, setTracks] = useState<string[]>([])
-
-    const tracksRef = ref(storage)
-
-    /* listAll(tracksRef)
-        .then(res => {
-            setTracks(res.items.map(item => {
-                getDownloadURL(item)
-            }))
-        }) */
-
-    const handleClick = (track: string) => {
-        if (track === selectedTrack || !track) return
-
-        setSelectedTrack(track)
-    }
 
     const openContactModal = () => {
         toggleModal()
@@ -55,17 +35,24 @@ export default function Portfolio({ isVisible, toggleModal, toggleContactModal }
         <div className={styles.modal} style={{ right: isVisible ? '0' : `-${width}` }}>
 
             <div>
-                <span>Mixed by Ken Baumann</span>
-                <button onClick={toggleModal}>close</button>
-                <Waveform track={selectedTrack} />
-                {tracks.length > 0 && tracks.map(track => (
-                    <TrackItem onClick={handleClick} name={track} />
-                ))}
+                
+                <CloseBtn toggleMenu={toggleModal} className={styles.closeBtn} />
+
+                <iframe
+                    src="https://app.filepass.com/player/ynidZbWPaZy6GTBG" 
+                    style={{ 
+                        background: 'transparent', 
+                        border: 'none', 
+                        outline: 'none', 
+                        width: '100%',
+                        height: '743px'
+                    }}
+                ></iframe>
             </div>
 
-            <div>
+            <div className={styles.btnDiv}>
                 <p>Like what you hear?</p>
-                <button onClick={openContactModal}>
+                <button onClick={openContactModal} className={styles.btn}>
                     Get In Touch
                 </button>
             </div>
