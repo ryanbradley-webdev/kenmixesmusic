@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Waveform from './Waveform'
 import TrackItem from './TrackItem'
 import { storage } from '../../util/firebase'
-import { ref, listAll, StorageReference } from 'firebase/storage'
+import { ref, listAll, StorageReference, getDownloadURL } from 'firebase/storage'
 import styles from './Portfolio.module.css'
 
 type PortfolioProps = {
@@ -12,12 +12,21 @@ type PortfolioProps = {
 }
 
 export default function Portfolio({ isVisible, toggleModal, toggleContactModal }: PortfolioProps) {
+    const [width, setWidth] = useState(() => {
+        if (window.innerWidth > 480) return '300px'
+        return  '100%'
+    })
     const [selectedTrack, setSelectedTrack] = useState('/Commercial_Demo.wav')
-    const [tracks, setTracks] = useState([
-        '/Commercial_Demo.wav',
-        '/Narration_Demo.mp3',
-        '/Voice_Acting_Demo.wav'
-    ])
+    const [tracks, setTracks] = useState<string[]>([])
+
+    const tracksRef = ref(storage)
+
+    /* listAll(tracksRef)
+        .then(res => {
+            setTracks(res.items.map(item => {
+                getDownloadURL(item)
+            }))
+        }) */
 
     const handleClick = (track: string) => {
         if (track === selectedTrack || !track) return
@@ -30,8 +39,20 @@ export default function Portfolio({ isVisible, toggleModal, toggleContactModal }
         toggleContactModal()
     }
 
+    useEffect(() => {
+        const changeListener = () => {
+            if (window.innerWidth <= 480) {
+                setWidth('100%')
+            }
+        }
+
+        window.addEventListener('change', changeListener)
+        
+        return () => window.removeEventListener('change', changeListener)
+    }, [])
+
     return (
-        <div className={styles.modal} style={{ right: isVisible ? '0' : '-300px' }}>
+        <div className={styles.modal} style={{ right: isVisible ? '0' : `-${width}` }}>
 
             <div>
                 <span>Mixed by Ken Baumann</span>
@@ -48,7 +69,7 @@ export default function Portfolio({ isVisible, toggleModal, toggleContactModal }
                     Get In Touch
                 </button>
             </div>
-            
+
         </div>
     )
 }
