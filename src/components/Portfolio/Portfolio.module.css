@@ -1,12 +1,13 @@
 .modal {
     position: absolute;
     top: 0;
-    bottom: 0;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 42px;
+    height: 100%;
     width: 100%;
+    padding-bottom: 20px;
     color: var(--color-white-sec);
     background-color: var(--color-bg-portfolio);
     transition: right 0.3s ease-in-out;

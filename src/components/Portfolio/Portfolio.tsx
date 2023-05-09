@@ -45,7 +45,7 @@ export default function Portfolio({ isVisible, toggleModal, toggleContactModal }
                         border: 'none', 
                         outline: 'none', 
                         width: '100%',
-                        height: '743px'
+                        height: '600px'
                     }}
                 ></iframe>
             </div>
