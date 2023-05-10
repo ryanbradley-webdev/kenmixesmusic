@@ -11,6 +11,7 @@
     color: var(--color-white-sec);
     background-color: var(--color-bg-portfolio);
     transition: right 0.3s ease-in-out;
+    z-index: 25;
 }
 
 @media screen and (min-width: 481px) {
