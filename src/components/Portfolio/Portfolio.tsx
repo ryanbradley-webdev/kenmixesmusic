@@ -14,6 +14,11 @@ export default function Portfolio({ isVisible, toggleModal, toggleContactModal }
         return  '100%'
     })
 
+    const [height, setHeight] = useState(() => {
+        if (window.innerWidth > 768) return '743px'
+        return '600px'
+    })
+
     const openContactModal = () => {
         toggleModal()
         toggleContactModal()
@@ -23,6 +28,14 @@ export default function Portfolio({ isVisible, toggleModal, toggleContactModal }
         const listener = () => {
             if (window.innerWidth <= 480) {
                 setWidth('100%')
+            } else {
+                setWidth('300px')
+            }
+
+            if (window.innerWidth > 768) {
+                setHeight('743px')
+            } else {
+                setHeight('600px')
             }
         }
 
@@ -45,7 +58,7 @@ export default function Portfolio({ isVisible, toggleModal, toggleContactModal }
                         border: 'none', 
                         outline: 'none', 
                         width: '100%',
-                        height: '600px'
+                        height: height
                     }}
                 ></iframe>
             </div>
