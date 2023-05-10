@@ -80,10 +80,10 @@
 }
 
 .menuBtn {
-    width: 150px;
+    width: fit-content;
     margin: 0 auto;
     padding: 8px;
-    color: black;
+    color: var(--color-white);
     background: transparent;
     border: none;
     font-family: 'Bebas Neue', 'Arial', 'sans-serif';
@@ -100,8 +100,7 @@
     }
 
     .menuBtn:is(:hover, :focus) {
-        color: var(--color-white);
-        background: var(--color-orange);
+        color: var(--color-orange);
     }
 }
 

@@ -15,7 +15,7 @@ export default function Contact({ isVisible, toggleModal }: ContactProps) {
         <div className={styles.modal} style={{ display: isVisible ? 'grid' : 'none' }}>
             <form action="" onSubmit={handleSubmit} className={styles.form}>
                 <h2>GET IN TOUCH</h2>
-                <CloseBtn toggleMenu={toggleModal} />
+                <CloseBtn className={styles.closeBtn} toggleMenu={toggleModal} />
                 <div className={styles.namesGrid}>
                     <label htmlFor="first-name">First Name *</label>
                     <input type="text" id='first-name' name='first-name' placeholder='e.g. Kat' required />

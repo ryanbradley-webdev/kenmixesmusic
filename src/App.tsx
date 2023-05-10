@@ -5,8 +5,8 @@ import Home from './components/Home/Home'
 import Bio from './components/Bio/Bio'
 import Credits from './components/Credits/Credits'
 import Contact from './components/Contact/Contact'
-import './App.css'
 import Portfolio from './components/Portfolio/Portfolio'
+import './App.css'
 
 function App() {
   const [contactModalVisible, setContactModalVisible] = useState(false)
