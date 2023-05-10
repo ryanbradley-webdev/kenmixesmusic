@@ -1,5 +1,32 @@
+.bio {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 769px) {
+    .bio {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .bio > img {
+        height: 100vh;
+        width: 50%;
+        object-fit: cover;
+        object-position: top;
+    }
+}
+
 .wrapper {
     padding-inline: 16px;
+}
+
+@media screen and (min-width: 769px) {
+    .wrapper {
+        width: fit-content;
+        margin-inline: auto;
+    }
 }
 
 .h2 {

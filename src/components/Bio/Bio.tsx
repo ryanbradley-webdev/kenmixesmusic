@@ -5,7 +5,7 @@ import Headshot from '/headshot.png'
 
 export default function Bio() {
     return (
-        <>
+        <div className={styles.bio}>
             <section className={styles.wrapper}>
 
                 <h2 className={styles.h2}>
@@ -33,6 +33,6 @@ export default function Bio() {
             </section>
 
             <img src={Headshot} alt="" />
-        </>
+        </div>
     )
 }

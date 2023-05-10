@@ -9,6 +9,13 @@
 
 main {
     flex-grow: 1;
+    padding-top: 106px;
+}
+
+@media screen and (min-width: 769px) {
+    main {
+        padding-top: 0;
+    }
 }
 
 a {
