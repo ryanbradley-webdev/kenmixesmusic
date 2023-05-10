@@ -28,7 +28,7 @@ function App() {
     if (location.pathname.includes('bio')) {
       if (root) root.style.backgroundColor = 'var(--color-bg-portfolio)'
     } else {
-      if (root) root.style.backgroundColor = 'var(--color-bg)'
+      if (root) root.style.backgroundColor = ''
     }
 
   }, [location])

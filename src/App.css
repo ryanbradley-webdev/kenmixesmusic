@@ -3,7 +3,6 @@
     flex-direction: column;
     height: 100%;
     font-family: 'Poppins', 'Arial', 'sans-serif';
-    background-color: var(--color-bg);
     transition: background-color 0.5s ease;
 }
 

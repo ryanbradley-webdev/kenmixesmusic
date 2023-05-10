@@ -23,10 +23,35 @@ html {
     height: 100dvh;
     overflow: hidden;
     color: var(--color-white);
-    background-image: url('/background.png');
+    background-color: #35373D;
+    background-image: url('/background-mobile.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+@media screen and (min-width: 481px) {
+    html {
+        background-image: url('/background-tablet.png');
+    }
+}
+
+@media screen and (min-width: 769px) {
+    html {
+        background-image: url('/background-small.png');
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    html {
+        background-image: url('/background-medium.png');
+    }
+}
+
+@media screen and (min-width: 1601px) {
+    html {
+        background-image: url('/background-large.png');
+    }
 }
 
 body {
