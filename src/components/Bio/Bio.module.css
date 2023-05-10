@@ -1,6 +1,19 @@
 .bio {
     display: flex;
     flex-direction: column;
+    opacity: 0;
+    transform: translateX(100px);
+    animation: bio-intro-fade-in 0.75s ease-in-out forwards;
+}
+
+@keyframes bio-intro-fade-in {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    } to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @media screen and (min-width: 769px) {
@@ -36,6 +49,12 @@
     text-align: center;
 }
 
+@media screen and (min-width: 1024px) {
+    .h2 {
+        font-size: 100px;
+    }
+}
+
 .h2 span {
     color: var(--color-orange);
 }
@@ -56,6 +75,12 @@
     margin-block: 24px;
 }
 
+@media screen and (min-width: 1024px) {
+    .btnDiv {
+        flex-direction: row;
+    }
+}
+
 .heroBtnTop,
 .heroBtnBottom {
     display: flex;
@@ -69,6 +94,7 @@
     color: var(--color-white);
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .heroBtnTop {
@@ -85,4 +111,18 @@
 .heroBtnBottom svg {
     width: 20px;
     fill: var(--color-white);
+    transition: all 0.3s ease;
+}
+
+@media screen and (min-width: 1024px) {
+    .heroBtnTop:is(:hover, :focus),
+    .heroBtnBottom:is(:hover, :focus) {
+        color: black;
+        background: var(--color-white);
+    }
+
+    .heroBtnTop:is(:hover, :focus) svg,
+    .heroBtnBottom:is(:hover, :focus) svg {
+        fill: black;
+    }
 }
