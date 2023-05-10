@@ -54,7 +54,8 @@
     border: 2px solid var(--color-white);
 }
 
-.heroBtnTop img,
-.heroBtnBottom img {
+.heroBtnTop svg,
+.heroBtnBottom svg {
     width: 20px;
+    fill: var(--color-white);
 }

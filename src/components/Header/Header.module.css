@@ -21,7 +21,7 @@
     cursor: pointer;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1024px) {
     .burgerBtn {
         display: none;
     }
@@ -68,7 +68,7 @@
     transition: right 0.3s ease-in-out;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1024px) {
     .menu {
         position: unset;
         flex-direction: row;
@@ -93,7 +93,7 @@
     transition: 0.3s ease;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1024px) {
     .menuBtn {
         color: var(--color-white);
         font-family: 'Poppins', 'Arial', 'sans-serif';
@@ -113,7 +113,7 @@
     gap: 30px;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1024px) {
     .nav {
         flex-direction: row;
     }
@@ -126,7 +126,7 @@
     transition: color 0.3s ease;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1024px) {
     .nav a {
         font-family: 'Poppins', 'Arial', 'sans-serif';
         font-size: 16px;
@@ -148,7 +148,7 @@
     cursor: pointer;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1024px) {
     .closeBtn {
         display: none;
     }

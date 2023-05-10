@@ -1,5 +1,5 @@
-import envelope from '../../assets/envelope-regular.svg'
-import music from '../../assets/music-solid.svg'
+import Envelope from '../../assets/Envelope'
+import Music from '../../assets/Music'
 import styles from './Bio.module.css'
 
 export default function Bio() {
@@ -14,12 +14,12 @@ export default function Bio() {
                 </p>
                 <div className={styles.btnDiv}>
                     <button className={styles.heroBtnTop}>
-                        <img src={envelope} alt="" />
+                        <Envelope />
                         Get In Touch
                     </button>
 
                     <button className={styles.heroBtnBottom}>
-                        <img src={music} alt="" />
+                        <Music />
                         Hear My Work
                     </button>
                 </div>

@@ -1,5 +1,5 @@
-import envelope from '../../assets/envelope-regular.svg'
-import music from '../../assets/music-solid.svg'
+import Envelope from '../../assets/Envelope'
+import Music from '../../assets/Music'
 import styles from './Home.module.css'
 
 type HomeProps = {
@@ -25,15 +25,19 @@ export default function Home({ toggleContactModal, togglePortfolio }: HomeProps)
                 My mixes help your recordings cut through the noise
             </p>
 
-            <button className={styles.heroBtnTop} onClick={toggleContactModal}>
-                <img src={envelope} alt="" />
-                Get In Touch
-            </button>
+            <div className={styles.btnDiv}>
 
-            <button className={styles.heroBtnBottom} onClick={togglePortfolio}>
-                <img src={music} alt="" />
-                Hear My Work
-            </button>
+                <button className={styles.heroBtnTop} onClick={toggleContactModal}>
+                    <Envelope />
+                    Get In Touch
+                </button>
+
+                <button className={styles.heroBtnBottom} onClick={togglePortfolio}>
+                    <Music />
+                    Hear My Work
+                </button>
+
+            </div>
 
         </section>
     )

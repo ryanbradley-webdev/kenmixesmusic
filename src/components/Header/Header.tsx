@@ -16,7 +16,7 @@ export default function Header({ toggleContactModal, togglePortfolio }: HeaderPr
 
     const toggleMenuVisibility = () => {
         const { innerWidth } = window
-        if (innerWidth > 769) {
+        if (innerWidth > 1024) {
             return
         }
         setIsVisible(!isVisible)
