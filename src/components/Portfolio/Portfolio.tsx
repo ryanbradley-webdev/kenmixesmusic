@@ -15,7 +15,7 @@ export default function Portfolio({ isVisible, toggleModal, toggleContactModal }
     })
 
     const [height, setHeight] = useState(() => {
-        if (window.innerWidth > 768) return '743px'
+        if (window.innerWidth > 768) return '750px'
         return '600px'
     })
 
@@ -33,7 +33,7 @@ export default function Portfolio({ isVisible, toggleModal, toggleContactModal }
             }
 
             if (window.innerWidth > 768) {
-                setHeight('743px')
+                setHeight('750px')
             } else {
                 setHeight('600px')
             }
