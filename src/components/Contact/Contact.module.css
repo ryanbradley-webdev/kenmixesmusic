@@ -47,6 +47,7 @@
     display: grid;
     padding: 24px;
     width: 80%;
+    max-width: 700px;
     color: #4f4f4f;
     background-color: var(--color-white);
     opacity: 0;
