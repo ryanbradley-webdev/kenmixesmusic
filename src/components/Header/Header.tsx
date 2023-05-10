@@ -3,8 +3,8 @@ import styles from './Header.module.css'
 import Burger from './Burger'
 import { useState } from 'react'
 import CloseBtn from '../../assets/CloseBtn'
-import Facebook from '../../assets/facebook.svg'
-import Instagram from '../../assets/instagram.svg'
+import Facebook from '../../assets/Facebook'
+import Instagram from '../../assets/Instagram'
 
 type HeaderProps = {
     toggleContactModal: () => void,
@@ -69,11 +69,11 @@ export default function Header({ toggleContactModal, togglePortfolio }: HeaderPr
                     <div className={styles.iconDiv}>
 
                         <Link to='https://www.facebook.com/kenmixesmusic' target='_blank' rel='noopener noreferrer'>
-                            <img src={Facebook} alt="" />
+                            <Facebook />
                         </Link>
 
                         <Link to='https://www.instagram.com/kenmixesmusic/' target='_blank' rel='noopener noreferrer'>
-                            <img src={Instagram} alt="" />
+                            <Instagram />
                         </Link>
 
                     </div>

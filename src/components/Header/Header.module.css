@@ -180,12 +180,13 @@
 .iconDiv a {
     display: grid;
     place-items: center;
-    width: 60px;
-    height: 60px;
-    background-color: var(--color-white-sec);
+    width: 45px;
+    height: 45px;
+    background-color: var(--color-white-ter);
     border-radius: 50%;
 }
 
-.iconDiv img {
+.iconDiv svg {
     height: 30px;
+    fill: var(--color-white)
 }
