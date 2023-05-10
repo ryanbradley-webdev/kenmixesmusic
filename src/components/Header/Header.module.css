@@ -83,7 +83,7 @@
     width: fit-content;
     margin: 0 auto;
     padding: 8px;
-    color: var(--color-white);
+    color: black;
     background: transparent;
     border: none;
     font-family: 'Bebas Neue', 'Arial', 'sans-serif';
@@ -94,6 +94,7 @@
 
 @media screen and (min-width: 769px) {
     .menuBtn {
+        color: var(--color-white);
         font-family: 'Poppins', 'Arial', 'sans-serif';
         font-size: 16px;
         margin: 0;
@@ -168,4 +169,23 @@
 
 .closeBtn div:last-child {
     rotate: -45deg;
+}
+
+.iconDiv {
+    display: flex;
+    width: fit-content;
+    gap: 40px;
+}
+
+.iconDiv a {
+    display: grid;
+    place-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-white-sec);
+    border-radius: 50%;
+}
+
+.iconDiv img {
+    height: 30px;
 }

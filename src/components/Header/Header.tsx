@@ -1,8 +1,10 @@
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import styles from './Header.module.css'
 import Burger from './Burger'
 import { useState } from 'react'
 import CloseBtn from '../../assets/CloseBtn'
+import Facebook from '../../assets/facebook.svg'
+import Instagram from '../../assets/instagram.svg'
 
 type HeaderProps = {
     toggleContactModal: () => void,
@@ -63,7 +65,21 @@ export default function Header({ toggleContactModal, togglePortfolio }: HeaderPr
                     <button className={styles.menuBtn} onClick={openContactModal}>
                         Contact
                     </button>
+
+                    <div className={styles.iconDiv}>
+
+                        <Link to='https://www.facebook.com/kenmixesmusic' target='_blank' rel='noopener noreferrer'>
+                            <img src={Facebook} alt="" />
+                        </Link>
+
+                        <Link to='https://www.instagram.com/kenmixesmusic/' target='_blank' rel='noopener noreferrer'>
+                            <img src={Instagram} alt="" />
+                        </Link>
+
+                    </div>
+                
                 </nav>
+
 
             </div>
 
