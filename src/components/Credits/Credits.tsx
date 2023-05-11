@@ -17,6 +17,7 @@ export default function Credits() {
     const [imgWidth, setImgWidth] = useState(chooseImgSize)
     const [scrollPosition, setScrollPosition] = useState(0)
     const [scrollPaused, setScrollPaused] = useState(false)
+    const [scrollIncrement, setScrollIncrement] = useState(2)
 
     const gridRef = useRef<HTMLDivElement>(null)
     
@@ -64,18 +65,27 @@ export default function Credits() {
 
         window.addEventListener('resize', listener)
 
-        return () => {
-            window.removeEventListener('resize', listener)
-        }
+        return () => window.removeEventListener('resize', listener)
     }, [])
 
     useEffect(() => {
         const interval = setInterval(() => {
-            !scrollPaused && setScrollPosition(prev => prev + 2)
+            !scrollPaused && setScrollPosition(prev => prev + scrollIncrement)
         }, 50)
 
         return () => clearInterval(interval)
-    }, [scrollPaused])
+    }, [scrollPaused, scrollIncrement])
+
+    useEffect(() => {
+        if (gridRef && gridRef.current) {
+            if (scrollPosition > gridRef.current.scrollLeft + 100) {
+                setScrollIncrement(-2)
+            }
+            if (scrollPosition < -100) {
+                setScrollIncrement(2)
+            }
+        }
+    }, [scrollPosition])
 
     useEffect(() => {
         if (gridRef && gridRef.current) {
