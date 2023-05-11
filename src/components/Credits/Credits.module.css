@@ -1,0 +1,59 @@
+.wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+    .wrapper {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.caret {
+    --padding: 8px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+}
+
+.caret:first-of-type {
+    left: var(--padding);
+}
+
+.caret:last-of-type {
+    right: var(--padding);
+}
+
+.caret svg {
+    height: 40px;
+    fill: var(--color-white-sec);
+}
+
+.scrollingGrid {
+    display: grid;
+    gap: 8px;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+.scrollingGrid::-webkit-scrollbar {
+    display: none;
+}
+
+.thumbnail {
+    overflow: hidden;
+}
+
+.thumbnail > img {
+    transition: transform 0.3s ease;
+}
+
+.thumbnail:hover > img {
+    transform: scale(1.1);
+}
