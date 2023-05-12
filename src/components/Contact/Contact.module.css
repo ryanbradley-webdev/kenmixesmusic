@@ -122,4 +122,5 @@
     background-color: var(--color-orange);
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }

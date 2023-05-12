@@ -34,15 +34,22 @@ export default function Contact({ isVisible, toggleModal }: ContactProps) {
     const validateForm = () => {
         const formRefs = [firstNameRef, lastNameRef, emailRef, messageRef]
 
+        let valid = true
+
         formRefs.forEach(ref => {
             if (!validateInput(ref)) {
-                setFormIsValid(false)
+                valid = false
             }
         })
+
+        setFormIsValid(valid)
     }
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
+
+        validateForm()
+
         if (formIsValid) {
             const firstName = firstNameRef?.current?.value
             const lastName = lastNameRef?.current?.value
@@ -137,7 +144,7 @@ export default function Contact({ isVisible, toggleModal }: ContactProps) {
                     required
                 ></textarea>
 
-                <button className={styles.submit} onClick={validateForm}>
+                <button className={styles.submit}>
                     Submit
                 </button>
 
