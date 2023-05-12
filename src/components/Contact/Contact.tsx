@@ -1,7 +1,8 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import CloseBtn from '../../assets/CloseBtn'
 import styles from './Contact.module.css'
 import axios from 'axios'
+import NotificationModal from './NotificationModal'
 
 type ContactProps = {
     isVisible: boolean,
@@ -9,6 +10,10 @@ type ContactProps = {
 }
 
 export default function Contact({ isVisible, toggleModal }: ContactProps) {
+    const [messageSending, setMessageSending] = useState(false)
+    const [messageSuccess, setMessageSuccess] = useState(false)
+    const [messageError, setMessageError] = useState(false)
+
     const firstNameRef = useRef<HTMLInputElement>(null)
     const lastNameRef = useRef<HTMLInputElement>(null)
     const emailRef = useRef<HTMLInputElement>(null)
@@ -43,10 +48,22 @@ export default function Contact({ isVisible, toggleModal }: ContactProps) {
         return valid
     }
 
+    const closeModalOnDelay = () => {
+        setTimeout(() => {
+            toggleModal()
+            setMessageSending(false)
+            setMessageSuccess(false)
+            setMessageError(false)
+            formRef?.current?.reset()
+        }, 1000)
+    }
+
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
         if (validateForm()) {
+            setMessageSending(true)
+
             const firstName = firstNameRef?.current?.value
             const lastName = lastNameRef?.current?.value
             const email = emailRef?.current?.value
@@ -61,13 +78,19 @@ export default function Contact({ isVisible, toggleModal }: ContactProps) {
 
             axios.post(import.meta.env.VITE_CONTACT_URL, emailData)
                 .then(res => {
-                    console.log(res)
+                    setMessageSending(false)
                     if (res.status === 200) {
-                        formRef?.current?.reset()
+                        setMessageSuccess(true)
+                    } else {
+                        setMessageError(true)
                     }
+                    closeModalOnDelay()
                 })
                 .catch(err => {
+                    setMessageSending(false)
+                    setMessageError(true)
                     console.log(err)
+                    closeModalOnDelay()
                 })
         }
     }
@@ -143,6 +166,12 @@ export default function Contact({ isVisible, toggleModal }: ContactProps) {
                 <button className={styles.submit} onClick={validateForm}>
                     Submit
                 </button>
+
+                <NotificationModal
+                    sending={messageSending}
+                    success={messageSuccess}
+                    error={messageError}
+                />
 
             </form>
 
