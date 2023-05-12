@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import CloseBtn from '../../assets/CloseBtn'
 import styles from './Contact.module.css'
 import axios from 'axios'
@@ -9,8 +9,6 @@ type ContactProps = {
 }
 
 export default function Contact({ isVisible, toggleModal }: ContactProps) {
-    const [formIsValid, setFormIsValid] = useState(true)
-
     const firstNameRef = useRef<HTMLInputElement>(null)
     const lastNameRef = useRef<HTMLInputElement>(null)
     const emailRef = useRef<HTMLInputElement>(null)
@@ -42,15 +40,13 @@ export default function Contact({ isVisible, toggleModal }: ContactProps) {
             }
         })
 
-        setFormIsValid(valid)
+        return valid
     }
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
-        validateForm()
-
-        if (formIsValid) {
+        if (validateForm()) {
             const firstName = firstNameRef?.current?.value
             const lastName = lastNameRef?.current?.value
             const email = emailRef?.current?.value
@@ -144,7 +140,7 @@ export default function Contact({ isVisible, toggleModal }: ContactProps) {
                     required
                 ></textarea>
 
-                <button className={styles.submit}>
+                <button className={styles.submit} onClick={validateForm}>
                     Submit
                 </button>
 

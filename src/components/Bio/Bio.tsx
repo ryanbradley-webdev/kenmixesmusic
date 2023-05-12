@@ -8,6 +8,11 @@ import HeadshotSmall from '/headshot-small.png'
 import HeadshotMedium from '/headshot-medium.png'
 import HeadshotLarge from '/headshot-large.png'
 
+type BioProps = {
+    togglePortfolio: () => void,
+    toggleContactModal: () => void
+}
+
 const determineMaxWidth = () => {
     const { innerWidth } = window
 
@@ -18,7 +23,7 @@ const determineMaxWidth = () => {
     return Infinity
 }
 
-export default function Bio() {
+export default function Bio({ togglePortfolio, toggleContactModal }: BioProps) {
     const [maxWidth, setMaxWidth] = useState(determineMaxWidth)
 
     useEffect(() => {
@@ -45,12 +50,12 @@ export default function Bio() {
 
                 <div className={styles.btnDiv}>
 
-                    <button className={styles.heroBtnTop}>
+                    <button className={styles.heroBtnTop} onClick={toggleContactModal}>
                         <Envelope />
                         Get In Touch
                     </button>
 
-                    <button className={styles.heroBtnBottom}>
+                    <button className={styles.heroBtnBottom} onClick={togglePortfolio}>
                         <Music />
                         Hear My Work
                     </button>

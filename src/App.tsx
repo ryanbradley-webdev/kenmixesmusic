@@ -38,7 +38,7 @@ function App() {
       <Routes>
         <Route path='/' element={<PageWrapper toggleContactModal={toggleContactModal} togglePortfolio={togglePortfolio} />}>
           <Route index element={<Home toggleContactModal={toggleContactModal} togglePortfolio={togglePortfolio} />} />
-          <Route path='bio' element={<Bio />} />
+          <Route path='bio' element={<Bio togglePortfolio={togglePortfolio} toggleContactModal={toggleContactModal} />} />
           <Route path='credits' element={<Credits />} />
         </Route>
       </Routes>

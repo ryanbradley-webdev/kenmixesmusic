@@ -7,8 +7,10 @@ import Thumbnail from './Thumbnail'
 const chooseImgSize = () => {
     const { innerWidth } = window
     if (innerWidth <= 480) return 180
-    if (innerWidth <= 768) return 250
-    if (innerWidth <= 1200) return 300
+    if (innerWidth <= 768) return 300
+    if (innerWidth <= 1200) return 150
+    if (innerWidth <= 1440) return 200
+    if (innerWidth <= 1800) return 250
     return 370
 }
 
