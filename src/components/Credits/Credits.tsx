@@ -37,6 +37,7 @@ export default function Credits() {
             const unroundedUnits = position / (imgWidth + 8)
             const units = Math.floor(position / (imgWidth + 8))
             const newPosition = units === unroundedUnits ? (units - 1) * (imgWidth + 8) : units * (imgWidth + 8)
+            gridRef.current.scrollLeft = newPosition
             setScrollPosition(newPosition)
         }
     }
@@ -46,6 +47,7 @@ export default function Credits() {
             const position = gridRef.current.scrollLeft
             const units = Math.floor(position / (imgWidth + 8))
             const newPosition = (units + 1) * (imgWidth + 8)
+            gridRef.current.scrollLeft = newPosition
             setScrollPosition(newPosition)
         }
     }
