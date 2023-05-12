@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
 import CloseBtn from '../../assets/CloseBtn'
 import styles from './Contact.module.css'
+import axios from 'axios'
 
 type ContactProps = {
     isVisible: boolean,
@@ -48,14 +49,23 @@ export default function Contact({ isVisible, toggleModal }: ContactProps) {
             const email = emailRef?.current?.value
             const message = messageRef?.current?.value
 
-            const formData = {
-                name: firstName + ' ' + lastName,
+            const emailData = {
+                firstName,
+                lastName,
                 email,
                 message
             }
 
-            formRef?.current?.reset()
-            return formData //TODO add form submission logic
+            axios.post(import.meta.env.VITE_CONTACT_URL, emailData)
+                .then(res => {
+                    console.log(res)
+                    if (res.status === 200) {
+                        formRef?.current?.reset()
+                    }
+                })
+                .catch(err => {
+                    console.log(err)
+                })
         }
     }
 
