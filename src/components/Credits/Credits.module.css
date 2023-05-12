@@ -52,11 +52,10 @@
     overflow: hidden;
 }
 
-.thumbnail > img {
-    pointer-events: none;
+.thumbnail img {
     transition: transform 0.5s ease;
 }
 
-.thumbnail:hover > img {
+.thumbnail:hover img {
     transform: scale(1.1);
 }

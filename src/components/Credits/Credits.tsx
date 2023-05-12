@@ -1,9 +1,8 @@
-import { useEffect, useRef, useState } from 'react'
+import { CSSProperties, useEffect, useRef, useState } from 'react'
 import LeftCaret from '../../assets/LeftCaret'
 import RightCaret from '../../assets/RightCaret'
 import styles from './Credits.module.css'
 import Thumbnail from './Thumbnail'
-import Placeholder from '/square-placeholder.png'
 
 const chooseImgSize = () => {
     const { innerWidth } = window
@@ -27,7 +26,9 @@ export default function Credits() {
             gridTemplateRows: `repeat(3, ${imgWidth}px)`
         },
         img: {
-            width: `${imgWidth}px`
+            width: `${imgWidth}px`,
+            height: `${imgWidth}px`,
+            objectFit: 'cover' as CSSProperties['objectFit']
         }
     }
 
@@ -135,7 +136,9 @@ export default function Credits() {
                 </Thumbnail>
                 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <a href="https://www.youtube.com/watch?v=DpbhVj8aGRM&t=15s" target='_blank' rel='noreferrer noopener'>
+                        <img src='https://img.youtube.com/vi/DpbhVj8aGRM/0.jpg' alt="" style={localStyles.img} />
+                    </a>
                 </Thumbnail>
                 
                 <Thumbnail>
@@ -155,7 +158,9 @@ export default function Credits() {
                 </Thumbnail>
 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <a href='https://www.youtube.com/watch?v=k22kg5fhQt0&t=15s' target='_blank' rel='noreferrer noopener'>
+                        <img src='https://img.youtube.com/vi/k22kg5fhQt0/0.jpg' alt="" style={localStyles.img} />
+                    </a>
                 </Thumbnail>
 
                 <Thumbnail>
@@ -175,7 +180,9 @@ export default function Credits() {
                 </Thumbnail>
 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <a href="https://www.youtube.com/watch?v=hlItub_HDBA&t=15s" target='_blank' rel='noreferrer noopener'>
+                        <img src='https://img.youtube.com/vi/hlItub_HDBA/0.jpg' alt="" style={localStyles.img} />
+                    </a>
                 </Thumbnail>
 
                 <Thumbnail>
@@ -200,7 +207,9 @@ export default function Credits() {
                 </Thumbnail>
 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <a href="https://www.youtube.com/watch?v=9et51orMrLQ&t=15s" target='_blank' rel='noreferrer noopener'>
+                        <img src='https://img.youtube.com/vi/9et51orMrLQ/0.jpg' alt="" style={localStyles.img} />
+                    </a>
                 </Thumbnail>
                 
                 <Thumbnail>
@@ -220,7 +229,9 @@ export default function Credits() {
                 </Thumbnail>
 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <a href="https://www.youtube.com/watch?v=IUhLFkxo0pM&t=15s" target='_blank' rel='noreferrer noopener'>
+                        <img src='https://img.youtube.com/vi/IUhLFkxo0pM/0.jpg' alt="" style={localStyles.img} />
+                    </a>
                 </Thumbnail>
                 
                 <Thumbnail>
@@ -240,7 +251,9 @@ export default function Credits() {
                 </Thumbnail>
 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <a href="https://www.youtube.com/watch?v=8KHHwIDX5Yw&t=15s" target='_blank' rel='noreferrer noopener'>
+                        <img src='https://img.youtube.com/vi/8KHHwIDX5Yw/0.jpg' alt="" style={localStyles.img} />
+                    </a>
                 </Thumbnail>
                 
                 <Thumbnail>
@@ -265,7 +278,9 @@ export default function Credits() {
                 </Thumbnail>
                 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <a href="https://www.youtube.com/watch?v=n_7al39PSzo" target='_blank' rel='noreferrer noopener'>
+                        <img src='https://img.youtube.com/vi/n_7al39PSzo/0.jpg' alt="" style={localStyles.img} />
+                    </a>
                 </Thumbnail>
 
                 <Thumbnail>
@@ -285,7 +300,9 @@ export default function Credits() {
                 </Thumbnail>
                 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <a href="https://www.youtube.com/watch?v=tFtW-VoijBI&t=15s" target='_blank' rel='noreferrer noopener'>
+                        <img src='https://img.youtube.com/vi/tFtW-VoijBI/0.jpg' alt="" style={localStyles.img} />
+                    </a>
                 </Thumbnail>
 
                 <Thumbnail>
@@ -305,7 +322,9 @@ export default function Credits() {
                 </Thumbnail>
 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <a href="https://www.youtube.com/watch?v=6sDLARBnzSM&t=15s" target='_blank' rel='noreferrer noopener'>
+                        <img src='https://img.youtube.com/vi/6sDLARBnzSM/0.jpg' alt="" style={localStyles.img} />
+                    </a>
                 </Thumbnail>
                 
                 <Thumbnail>
@@ -325,7 +344,9 @@ export default function Credits() {
                 </Thumbnail>
 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <a href="https://open.spotify.com/track/2DkNJATQWkS36JlDhoqyKl" target='_blank' rel='noreferrer noopener'>
+                        <img src='/rose-tint.png' alt="" style={localStyles.img} />
+                    </a>
                 </Thumbnail>
                 
                 <Thumbnail>
