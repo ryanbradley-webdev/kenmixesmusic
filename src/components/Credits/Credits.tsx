@@ -113,92 +113,23 @@ export default function Credits() {
                 onMouseOut={resumeScrolling}
             >
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <img src='/brasko.png' alt="" style={localStyles.img} />
                 </Thumbnail>
                 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <img src='/lift-it-up-and-feel-good.png' alt="" style={localStyles.img} />
                 </Thumbnail>
 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <img src='/best-life.png' alt="" style={localStyles.img} />
                 </Thumbnail>
 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <img src='/motions.png' alt="" style={localStyles.img} />
                 </Thumbnail>
                 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-                
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-                
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-                
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-                
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-                
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-                
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-
-
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-                
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <img src='/reckless-endangerment.png' alt="" style={localStyles.img} />
                 </Thumbnail>
                 
                 <Thumbnail>
@@ -206,11 +137,19 @@ export default function Credits() {
                 </Thumbnail>
                 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <img src='/quota.png' alt="" style={localStyles.img} />
+                </Thumbnail>
+
+                <Thumbnail>
+                    <img src='/grown-ups.png' alt="" style={localStyles.img} />
+                </Thumbnail>
+
+                <Thumbnail>
+                    <img src='/after-the-party.png' alt="" style={localStyles.img} />
                 </Thumbnail>
                 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <img src='/parables.png' alt="" style={localStyles.img} />
                 </Thumbnail>
 
                 <Thumbnail>
@@ -218,56 +157,44 @@ export default function Credits() {
                 </Thumbnail>
 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <img src='/alterego-vii.png' alt="" style={localStyles.img} />
                 </Thumbnail>
                 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <img src='/brothers.png' alt="" style={localStyles.img} />
                 </Thumbnail>
 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <img src='/glitter-bomb.png' alt="" style={localStyles.img} />
                 </Thumbnail>
                 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <img src='/cast-of-characters.png' alt="" style={localStyles.img} />
                 </Thumbnail>
 
                 <Thumbnail>
                     <img src={Placeholder} alt="" style={localStyles.img} />
+                </Thumbnail>
+
+                <Thumbnail>
+                    <img src='/dirty-fuss.png' alt="" style={localStyles.img} />
                 </Thumbnail>
                 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <img src='/tru-genesis.png' alt="" style={localStyles.img} />
                 </Thumbnail>
 
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <img src='/common-kid.png' alt="" style={localStyles.img} />
                 </Thumbnail>
                 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-
-
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-                
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <img src='/synthesize.png' alt="" style={localStyles.img} />
                 </Thumbnail>
 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <img src='/moods.png' alt="" style={localStyles.img} />
                 </Thumbnail>
 
                 <Thumbnail>
@@ -275,31 +202,19 @@ export default function Credits() {
                 </Thumbnail>
                 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <img src='/new-blood.png' alt="" style={localStyles.img} />
                 </Thumbnail>
                 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <img src='/tik-tok-tailgate.png' alt="" style={localStyles.img} />
                 </Thumbnail>
                 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <img src='/obsidian.png' alt="" style={localStyles.img} />
                 </Thumbnail>
 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-                
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
-                </Thumbnail>
-
-                <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <img src='/glory-days.png' alt="" style={localStyles.img} />
                 </Thumbnail>
 
                 <Thumbnail>
@@ -307,7 +222,19 @@ export default function Credits() {
                 </Thumbnail>
                 
                 <Thumbnail>
-                    <img src={Placeholder} alt="" style={localStyles.img} />
+                    <img src='/never-alone.png' alt="" style={localStyles.img} />
+                </Thumbnail>
+
+                <Thumbnail>
+                    <img src='/alterego-v.png' alt="" style={localStyles.img} />
+                </Thumbnail>
+
+                <Thumbnail>
+                    <img src='/the-untethering.png' alt="" style={localStyles.img} />
+                </Thumbnail>
+                
+                <Thumbnail>
+                    <img src='/exhibit.png' alt="" style={localStyles.img} />
                 </Thumbnail>
 
                 <Thumbnail>
@@ -315,11 +242,64 @@ export default function Credits() {
                 </Thumbnail>
                 
                 <Thumbnail>
+                    <img src='/the-night-driver.png' alt="" style={localStyles.img} />
+                </Thumbnail>
+
+                <Thumbnail>
+                    <img src='/violet-mourning.png' alt="" style={localStyles.img} />
+                </Thumbnail>
+
+                <Thumbnail>
+                    <img src='/jacob-resch.png' alt="" style={localStyles.img} />
+                </Thumbnail>
+                
+                <Thumbnail>
+                    <img src='/andy-elison.png' alt="" style={localStyles.img} />
+                </Thumbnail>
+
+
+                <Thumbnail>
+                    <img src='/rhythm-scott.png' alt="" style={localStyles.img} />
+                </Thumbnail>
+                
+                <Thumbnail>
                     <img src={Placeholder} alt="" style={localStyles.img} />
                 </Thumbnail>
 
                 <Thumbnail>
+                    <img src='/wrong-side-of-the-bed.png' alt="" style={localStyles.img} />
+                </Thumbnail>
+
+                <Thumbnail>
+                    <img src='/stages.png' alt="" style={localStyles.img} />
+                </Thumbnail>
+                
+                <Thumbnail>
+                    <img src='/backroad-summertime.png' alt="" style={localStyles.img} />
+                </Thumbnail>
+                
+                <Thumbnail>
+                    <img src='/silex.png' alt="" style={localStyles.img} />
+                </Thumbnail>
+                
+                <Thumbnail>
                     <img src={Placeholder} alt="" style={localStyles.img} />
+                </Thumbnail>
+
+                <Thumbnail>
+                    <img src='/adolescence.png' alt="" style={localStyles.img} />
+                </Thumbnail>
+
+                <Thumbnail>
+                    <img src='/the-explorer.png' alt="" style={localStyles.img} />
+                </Thumbnail>
+                
+                <Thumbnail>
+                    <img src='/midnight-insomnia.png' alt="" style={localStyles.img} />
+                </Thumbnail>
+
+                <Thumbnail>
+                    <img src='/alterego-vi.png' alt="" style={localStyles.img} />
                 </Thumbnail>
 
                 <Thumbnail>
@@ -327,7 +307,27 @@ export default function Credits() {
                 </Thumbnail>
                 
                 <Thumbnail>
+                    <img src='/60-and-sunny.png' alt="" style={localStyles.img} />
+                </Thumbnail>
+
+                <Thumbnail>
+                    <img src='/clocking-out.png' alt="" style={localStyles.img} />
+                </Thumbnail>
+                
+                <Thumbnail>
+                    <img src='/heads-of-people.png' alt="" style={localStyles.img} />
+                </Thumbnail>
+
+                <Thumbnail>
+                    <img src='/novva.png' alt="" style={localStyles.img} />
+                </Thumbnail>
+
+                <Thumbnail>
                     <img src={Placeholder} alt="" style={localStyles.img} />
+                </Thumbnail>
+                
+                <Thumbnail>
+                    <img src='/adam-agin.png' alt="" style={localStyles.img} />
                 </Thumbnail>
 
             </div>
