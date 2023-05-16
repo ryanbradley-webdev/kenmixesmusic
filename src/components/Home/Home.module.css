@@ -55,6 +55,40 @@
 
 @media screen and (min-width: 769px) {
     .heroSection {
+        margin-inline: 23% 0;
+        width: 314px;
+    }
+
+    .hero {
+        font-size: 80px;
+    }
+
+    .subheader {
+        font-size: 12px;
+    }
+
+    .btnDiv {
+        flex-direction: row;
+        gap: 32px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .heroSection {
+        width: 471px;
+    }
+
+    .hero {
+        font-size: 120px;
+    }
+
+    .subheader {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .heroSection {
         width: 550px;
     }
 
@@ -64,17 +98,6 @@
 
     .subheader {
         font-size: 20px;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .heroSection {
-        margin-inline: 23% 0;
-    }
-
-    .btnDiv {
-        flex-direction: row;
-        gap: 32px;
     }
 }
 
