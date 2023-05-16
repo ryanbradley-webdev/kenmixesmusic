@@ -192,3 +192,28 @@
     height: 30px;
     fill: var(--color-white)
 }
+
+@media screen and (min-width: 1024px) {
+    .iconDiv {
+        gap: 20px;
+    }
+
+    .iconDiv a {
+        width: 30px;
+        height: 30px;
+        transition: 0.3s ease;
+    }
+
+    .iconDiv a:is(:hover, :focus) {
+        transform: scale(1.2);
+    }
+
+    .iconDiv svg {
+        height: 20px;
+        transition: 0.3s ease;
+    }
+
+    .iconDiv a:is(:hover, :focus) svg {
+        fill: var(--color-orange);
+    }
+}
