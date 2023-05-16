@@ -1,41 +1,13 @@
-import { useEffect, useState } from 'react'
 import Envelope from '../../assets/Envelope'
 import Music from '../../assets/Music'
 import styles from './Bio.module.css'
-import HeadshotMobile from '/headshot-mobile.png'
-import HeadshotTablet from '/headshot-tablet.png'
-import HeadshotSmall from '/headshot-small.png'
-import HeadshotMedium from '/headshot-medium.png'
-import HeadshotLarge from '/headshot-large.png'
 
 type BioProps = {
     togglePortfolio: () => void,
     toggleContactModal: () => void
 }
 
-const determineMaxWidth = () => {
-    const { innerWidth } = window
-
-    if (innerWidth <= 480) return 480
-    if (innerWidth <= 768) return 768
-    if (innerWidth <= 1200) return 1200
-    if (innerWidth <= 1600) return 1600
-    return Infinity
-}
-
 export default function Bio({ togglePortfolio, toggleContactModal }: BioProps) {
-    const [maxWidth, setMaxWidth] = useState(determineMaxWidth)
-
-    useEffect(() => {
-        const listener = () => {
-            setMaxWidth(determineMaxWidth)
-        }
-
-        window.addEventListener('resize', listener)
-
-        return () => window.removeEventListener('resize', listener)
-    }, [])
-
     return (
         <div className={styles.bio}>
             <section className={styles.wrapper}>
@@ -64,11 +36,11 @@ export default function Bio({ togglePortfolio, toggleContactModal }: BioProps) {
 
             </section>
 
-            {maxWidth === 480 && <img src={HeadshotMobile} alt="" />}
-            {maxWidth === 768 && <img src={HeadshotTablet} alt="" />}
-            {maxWidth === 1200 && <img src={HeadshotSmall} alt="" />}
-            {maxWidth === 1600 && <img src={HeadshotMedium} alt="" />}
-            {maxWidth > 1600 && <img src={HeadshotLarge} alt="" />}
+            <img
+                srcSet='/headshot-mobile.png 480w, /headshot-tablet.png 768w, /headshot-small.png 600w, /headshot-medium.png 800w, /headshot-large.png 1500w'
+                sizes='(max-width: 480px) 480px, (max-width: 768px) 768px, (max-width: 1200px) 600px, (max-width: 1600px) 800px, 1500px'
+                alt=''
+            />
         </div>
     )
 }
