@@ -83,20 +83,20 @@ export default function Credits() {
 
     useEffect(() => {
         if (gridRef && gridRef.current) {
-            if (scrollPosition > gridRef.current.scrollLeft + 100) {
+            gridRef.current.scrollLeft = scrollPosition
+
+            const { innerWidth } = window
+            
+            const endBoundary = imgWidth * 19 - innerWidth
+
+            if (scrollPosition > endBoundary) {
                 setScrollIncrement(-2)
             }
             if (scrollPosition < -100) {
                 setScrollIncrement(2)
             }
         }
-    }, [scrollPosition])
-
-    useEffect(() => {
-        if (gridRef && gridRef.current) {
-            gridRef.current.scrollLeft = scrollPosition
-        }
-    }, [scrollPosition])
+    }, [scrollPosition, imgWidth])
 
     return (
         <div className={styles.wrapper}>
