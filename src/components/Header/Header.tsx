@@ -1,7 +1,7 @@
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import styles from './Header.module.css'
 import Burger from './Burger'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import CloseBtn from '../../assets/CloseBtn'
 import Facebook from '../../assets/Facebook'
 import Instagram from '../../assets/Instagram'
@@ -13,6 +13,10 @@ type HeaderProps = {
 
 export default function Header({ toggleContactModal, togglePortfolio }: HeaderProps) {
     const [isVisible, setIsVisible] = useState(false)
+    const [background, setBackground] = useState('')
+    const [transitionDelay, setTransitionDelay] = useState('')
+
+    const location = useLocation()
 
     const toggleMenuVisibility = () => {
         const { innerWidth } = window
@@ -32,8 +36,18 @@ export default function Header({ toggleContactModal, togglePortfolio }: HeaderPr
         togglePortfolio()
     }
 
+    useEffect(() => {
+        if (location.pathname.includes('bio')) {
+            setBackground('var(--color-bg-portfolio)')
+            setTransitionDelay('0.5s')
+        } else {
+            setBackground('')
+            setTransitionDelay('')
+        }
+    }, [location])
+
     return (
-        <header className={styles.header}>
+        <header className={styles.header} style={{ background, transitionDelay }}>
             <h2 className={styles.name}>
                 <span style={{ fontWeight: '300', color: 'var(--color-orange)' }}>KEN</span>
                 <span>BAUMANN</span>

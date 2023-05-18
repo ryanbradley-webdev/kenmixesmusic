@@ -1,8 +1,8 @@
 #root {
+    position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
-    overflow-y: scroll;
     overflow-x: hidden;
     font-family: 'Poppins', 'Arial', 'sans-serif';
     transition: background-color 0.5s ease;
@@ -10,7 +10,6 @@
 
 main {
     flex-grow: 1;
-    padding-top: 106px;
 }
 
 @media screen and (min-width: 769px) {

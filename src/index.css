@@ -22,7 +22,6 @@
 html {
     height: 100vh;
     height: 100dvh;
-    overflow: hidden;
     color: var(--color-white);
     background-color: #35373D;
     background-image: url('/background-mobile.png');
