@@ -1,0 +1,6 @@
+.section {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    height: 100%;
+}

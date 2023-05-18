@@ -7,6 +7,7 @@ import Credits from './components/Credits/Credits'
 import Contact from './components/Contact/Contact'
 import Portfolio from './components/Portfolio/Portfolio'
 import './App.css'
+import NotFound from './components/NotFound/NotFound'
 
 function App() {
   const [contactModalVisible, setContactModalVisible] = useState(false)
@@ -40,6 +41,7 @@ function App() {
           <Route index element={<Home toggleContactModal={toggleContactModal} togglePortfolio={togglePortfolio} />} />
           <Route path='bio' element={<Bio togglePortfolio={togglePortfolio} toggleContactModal={toggleContactModal} />} />
           <Route path='credits' element={<Credits />} />
+          <Route path='/*' element={<NotFound />} />
         </Route>
       </Routes>
       <Contact isVisible={contactModalVisible} toggleModal={toggleContactModal} />
